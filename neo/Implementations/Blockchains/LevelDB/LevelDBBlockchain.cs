@@ -113,6 +113,7 @@ namespace Neo.Implementations.Blockchains.LevelDB
             }
             thread_persistence = new Thread(PersistBlocks);
             thread_persistence.Name = "LevelDBBlockchain.PersistBlocks";
+            thread_persistence.Priority = ThreadPriority.AboveNormal;
             thread_persistence.Start();
         }
 
